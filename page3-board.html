@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang=''>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/page0-menu.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/page3-place-board.css">
+
+
+
+
+
+
+
+
+
+
+	</script>
+	<script>
+		$.ajax({
+			url: 'https://spreadsheets.google.com/feeds/cells/1_ko5QZG3AZdU_6yWbEahFoTt6oMnECPmOnRWmMQOSG4/od6/public/basic?alt=json',
+			type: 'get',
+			dataType: 'jsonp',
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log('Problem with call to get list of articles\n', errorThrown);
+			},
+			success: function(oxo) {
+				console.log('call success, data is\n', oxo.feed.entry.length);
+
+
+				$.each(oxo.feed.entry, function(i, f) {
+
+
+
+					if (i == 1 || i == 2 || i == 3 || i % 4 == 1 || i % 4 == 2 || i % 4 == 3) {
+						return true;
+					}
+
+
+					var tblRow = "<div class='singlecard'>" +
+						"<div class='card cs'>" +
+						"<div class='profile'>" +
+						"<img src=" + oxo.feed.entry[i + 3].content.$t + ">" +
+						"<div class='border'></div>" +
+						"</div>" +
+						"<div class='name'>" +
+						"<p>" + f.content.$t + "</p>"+
+						"<p id='stats'>"+oxo.feed.entry[i+1].content.$t+ "</p>"+
+						"</div>" +
+						"<div class='numbers'>" +
+						"</div>" +
+						"</div>" +
+						"</div>"
+					$(tblRow).appendTo(".allcardscs");
+				});
+			}
+		});
+
+
+
+
+
+
+
+
+
+		$.ajax({
+			url: 'https://spreadsheets.google.com/feeds/cells/1EZnpP5-timiPhuk83nj40mQBN9gIdNMXkfn6NFuouvY/od6/public/basic?alt=json',
+			type: 'get',
+			dataType: 'jsonp',
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log('Problem with call to get list of articles\n', errorThrown);
+			},
+			success: function(oxo) {
+				console.log('call success, data is\n', oxo.feed.entry.length);
+
+
+				$.each(oxo.feed.entry, function(i, f) {
+
+
+
+					if (i == 1 || i == 2 || i % 3 == 1 || i % 3 == 2) {
+						return true;
+					}
+
+
+					var tblRow = "<div class='singlecard'>" +
+						"<div class='card ec'>" +
+						"<div class='profile'>" +
+						"<img src=" + oxo.feed.entry[i + 2].content.$t + ">" +
+						"<div class='border'></div>" +
+						"</div>" +
+						"<div class='name'>" +
+						"<p>" + f.content.$t + "</p>" +
+						"<p id='stats'>"+oxo.feed.entry[i+1].content.$t+ "</p>"+
+						"</div>" +
+						"<div class='numbers'>" +
+						"</div>" +
+						"</div>" +
+						"</div>"
+					$(tblRow).appendTo(".allcardsec");
+				});
+			}
+		});
+
+
+
+	</script>
+
+
+
+
+</head>
+
+<body>
+
+	<div id='cssmenu'>
+		<ul>
+			<li class='active'><a href='page0-home.html'><span><img src="images/npl1.png" </span></a></li>
+			<li><a href='page1-calendar.html'><span> <img src="ico/cal.png" style="vertical-align:middle;"> Calender</span></a></li>
+			<li><a href='page2-notices.html'><span><img src="ico/notice.png" style="vertical-align:middle;"> Notices</span></a></li>
+			<li><a href='page3-board.html'><span><img src="ico/placed.png" style="vertical-align:middle;"> Placed Board</span></a></li>
+			<li><a href='#'><span><img src="ico/members.png" style="vertical-align:middle;"> Team</span></a></li>
+			<li class='last'><a href='page0-home.html#bg-3x'><span><img src="ico/pin.png" style="vertical-align:middle;"> Contact us</span></a></li>
+		</ul>
+	</div>
+	<div class="banner"><img style="max-width: 100%;" src="images/500x214.png"></div>
+	<div class="notihead" >Placement Board</div>
+		<h5><img style="max-width: 100%;" src="ico/placed.png"></h5>
+
+	<div class="allcardscs allcards">
+		<span class="cardstitle">Comupter Science</span>
+		<hr class="style-eight">
+	</div>
+
+
+	<div class="allcardsec allcards">
+		<span class="cardstitle">Mechanical Engineering</span>
+		<hr class="style-eight">
+	</div>
+
+
+
+	<div class="allcardsec allcards">
+		<span class="cardstitle">Civil Engineering</span>
+		<hr class="style-eight">
+	</div>
+
+
+	<div class="allcardsec allcards">
+		<span class="cardstitle">Electrical Engineering</span>
+		<hr class="style-eight">
+	</div>
+
+
+	<div class="allcardsec allcards">
+		<span class="cardstitle">IT</span>
+		<hr class="style-eight">
+	</div>
+<div class="placecom-foot">© PLACECOM | 2016</div>
+</body>
+<html>

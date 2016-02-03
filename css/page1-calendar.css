@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+html, body{
+padding: 0;
+	margin: 0;
+
+}
+
+.banner {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	display: table;
+	height: auto;
+	padding: 0 10px 0 10px;
+}
+#cssmenu {
+
+  width: auto;
+}
+#cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+#cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+#cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#cssmenu.align-right ul li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+
+
+#cssmenu ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+  display: block;
+  padding: 10px 25px;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+
+
+#cssmenu ul li a:hover {
+  color: #2c3e50;
+}
+#cssmenu ul li a:hover:before {
+  width: 100%;
+height: 2px;
+}
+
+#cssmenu ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+  background: #7f8c8d;
+  -webkit-transition: height .22s;
+  -moz-transition: height .22s;
+  -ms-transition: height .22s;
+  -o-transition: height .22s;
+  transition: height .22s;
+}
+#cssmenu ul li.last > a:after,
+#cssmenu ul li:last-child > a:after {
+  display: none;
+}
+#cssmenu ul li.active a {
+  color: #2c3e50;
+
+	margin-right: 400px;
+}
+#cssmenu ul li.active a:before {
+  width: 0%;
+}
+#cssmenu.align-right li.last > a:after,
+#cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+#cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cssmenu ul li {
+	float: none;
+	display: block;
+  }
+  #cssmenu ul li a {
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 1px solid #2c3e50;
+  }
+  #cssmenu ul li.last > a,
+  #cssmenu ul li:last-child > a {
+	border: 0;
+  }
+  #cssmenu ul li a:after {
+	display: none;
+  }
+  #cssmenu ul li a:before {
+	display: none;
+  }
+}
+
+.notihead {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 27px;
+	color: #2c3e50;
+	padding-bottom: 20px;
+	font-weight: 700;
+}
+
+
+
+h5{
+	padding-bottom: 50px;
+	overflow: hidden;
+	text-align: center;
+	max-width:800px;
+	min-width:50px;
+	margin: 0 auto;
+
+}
+h5:before,
+h5:after {
+	box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+	background-color: #fff;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+h5:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+h5:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+.calx{
+
+
+
+
+background: #7b4397; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	padding: 50px 0 50px 0;
+
+
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+.cal-whole {
+	font-family: 'Lato', sans-serif;
+	border-left: 12px solid #ecf0f1;
+	border-radius: 10px;
+	max-width: 500px;
+	min-width: 100px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-left: 5px;
+	color: #fff;
+}
+.cal-box {
+	padding: 0px 0 80px 0;
+
+}
+.cal-date {
+	font-weight: 700;
+	padding-left: 5px;
+}
+.cal-dot {
+	width: 22px;
+	height: 22px;
+	background-color: #ecf0f1;
+	-webkit-border-radius: 50px;
+	/* Safari, Chrome */
+	-moz-border-radius: 50px;
+	/* Firefox */
+	border-radius: 50px;
+	/* CSS3 */
+	vertical-align: middle;
+	margin-left: -16px;
+}
+.date-dot {
+	display: inline-block;
+}
+.cal-content {
+	padding-left: 5px;
+}
+
+.placecom-foot{
+color: #fff;
+	font-size: 14px;
+	text-align: center;
+padding-top: 100px;
+font-family: 'Lato', sans-serif;
+
+
+
+}
+
